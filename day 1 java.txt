@@ -1,0 +1,272 @@
+// ATM USING SWITCH CASE
+/*import java.io.*;
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        int balance = 50000;
+    int withdrawMoney;
+    int depositMoney;
+        System.out.println("Enter your four digit PIN:");
+        Scanner sc = new Scanner(System.in);
+        int pin = sc.nextInt();
+        if(pin == 1234){
+            System.out.println("Welcome");
+        }else{
+            System.out.println("Incorrect pin");
+        }
+        System.out.println("1 Check Balance");
+        System.out.println("2 Withdraw Money");
+        System.out.println("3 Deposit Money");
+        System.out.println("4 Exit");
+        while(true){
+        System.out.println("Enter your choice (1,2,3,4):");
+        int choice = sc.nextInt();
+        switch(choice){
+            case 1:
+                System.out.println("Your current balance is:"+ balance);
+                break;
+            case 2:
+                System.out.println("Enter your withdraw amount:");
+                withdrawMoney = sc.nextInt();
+                System.out.println(withdrawMoney);
+                if(balance >= withdrawMoney){
+                    balance = balance - withdrawMoney;
+                }
+                else if(withdrawMoney % 100 != 0){
+                    System.out.println("Invalid amount");
+                }
+                else{
+                    System.out.println("Insufficient balance");
+                    }
+                break;
+            case 3:
+                System.out.println("Enter your deposit amount");
+                int depositAmount = sc.nextInt();
+                balance = balance + depositAmount;
+                System.out.println("Deposit successful");
+                break;
+            case 4:
+                System.out.println("Thankyou");
+                break;
+    }
+}
+}
+}*/
+//SUM OF DIGITS
+/*import java.io.*;
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int sum = 0;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        while(n>0){
+            int rem = n%10;
+            sum = sum + rem;
+            n = n/10;
+        }
+        System.out.println(sum);
+    }
+}*/
+// LENGTH OF THE Number
+/*import java.io.*;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        int count = 0;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        while(n>0){
+            count += 1;
+            n = n / 10;
+        }
+        System.out.println(count);
+    }
+}*/
+//FIND THE LARGEST DIGIT FROM THE NUMBERS
+/*import java.io.*;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        int max = 0;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        while(n>0){
+            int value = n % 10;
+            if(value > max){ // max = max < value ? max : rem;
+                max = value; 
+            }
+            n = n / 10;
+        }
+        System.out.println(max);
+    }
+}*/
+// PERFECT NUMBERS
+/*import java.io.*;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc .nextInt();
+        int sum = 0;
+        for(int i=1; i<=n/2; i++){
+            if(n%i == 0){
+                sum += i;
+            }
+        }
+        if(sum == n){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+    }
+}*/
+// ARMSTRONG NUMBER
+/*import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n, digits = String.valueOf(n).length(), sum = 0;
+        while (temp > 0) {
+            int d = temp % 10;
+            sum += (int)Math.pow(d, digits);
+            temp /= 10;
+        }
+        if (sum == n)
+            System.out.println("Armstrong");
+        else
+            System.out.println("Not Armstrong");
+    }
+}*/
+//REVERSE A NUMBER
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int rev = 0;
+
+        while (n > 0) {
+            rev = rev * 10 + n % 10;
+            n /= 10;
+        }
+
+        System.out.println(rev);
+    }
+}*/
+//PALINDROME
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int temp = n, rev = 0;
+
+        while (temp > 0) {
+            rev = rev * 10 + temp % 10;
+            temp /= 10;
+        }
+
+        System.out.println(rev == n);
+    }
+}*/
+//FIBNOCCI SERIES
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int a = 0, b = 1;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}*/
+//PRINT FIRST 50 NATURAL NUMBERS
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 5 != 0)
+                System.out.print(i + " ");
+        }
+    }
+}*/
+//FACTORIAL OF A NUMBER
+/*import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+        System.out.println(fact);
+    }
+}*/
+// SUM OF FIRST 10 NATURAL NUMBERS
+/*import java.io.*;
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        int sum = 0;
+
+        for (int i = 1; i <= 10; i++)
+            sum += i;
+
+        System.out.println(sum);
+    }
+}*/
+// SUM OF FIRST 10 EVEN NUMBERS
+/*import java.io.*;
+class Main {
+    public static void main(String[] args) {
+        int sum = 0;
+
+        for (int i = 2; i <= 20; i += 2)
+            sum += i;
+
+        System.out.println(sum);
+    }
+}*/
+//SUM OF FIRST 10 ODD NUMBERS
+/*import java.io.*;
+class Main {
+    public static void main(String[] args) {
+        int sum = 0;
+
+        for (int i = 1; i <= 19; i += 2)
+            sum += i;
+
+        System.out.println(sum);
+    }
+}*/
+// MULTIPLICATION TABLE
+/*import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++)
+            System.out.println(i + "*" + n + "=" + (i * n));
+    }
+}*/
