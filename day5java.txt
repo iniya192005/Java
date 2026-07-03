@@ -1,0 +1,75 @@
+// PRINTING AN ARRAY REVERSE
+
+/*import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int arr[] = {1,2,3,4};
+        System.out.println(Arrays.toString(arr));
+        int left = 0;
+        int right = arr.length-1;
+        while(left<right){
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}*/
+
+//PALINDROME ARRAY USING 2 POINT ARRAY
+
+/*import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int left = 0;
+        int right = n - 1;
+        boolean isPalindrome = true;
+        while (left < right) {
+            if (arr[left] != arr[right]) {
+                isPalindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        if (isPalindrome)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}*/
+
+// COMPARE TWO LIST SAME OR NOT
+
+/*import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int arr1[] = {2, 3, 1};
+        int arr2[] = {1, 2, 3};
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        boolean same = true;
+        if (arr1.length != arr2.length) {
+            same = false;
+        } else {
+            for (int i = 0; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    same = false;
+                    break;
+                }
+            }
+        }
+        if (same)
+            System.out.println("Same");
+        else
+            System.out.println("Not Same");
+    }
+}*/
